@@ -11,6 +11,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+
     <!-- NATIVE CSS STUFF -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -21,10 +24,11 @@
   </head>
 
   <body>
-  	<!-- .NAV -->
+
+  	<!-- NAV -->
     <div id="nav-wrapper">
     	<div id="nav">
-    	  <div class="navbar navbar-default navbar-static-top">
+    	  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     	    <div class="container">
     	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
     	      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,7 +41,7 @@
                 <a href="index.html"><img src="#" class="mini-logo">LOGO</a>
               </ul>
     	        <ul class="nav pull-right navbar-nav">
-    	          <li><a href="#">ABOUT</a></li>
+    	           <li><a href="#menu" id="toggle"><i class="fa fa-bars fa-6"></i></li>
     	        </ul>
     	      </div>		
     	    </div>
@@ -45,23 +49,28 @@
       </div>
     </div>
 
-    <!-- MAP -->
-        <div id="map_canvas" class="mapping"></div>
+  <!-- SIDEBAR -->
+      
+  <!-- MAP -->
+  <div class="container-fluid"
+    <div id="map-canvas" class="mapping"></div>
+  </div>
 
-      <!--FOOTER-->
-      <footer>
-      </footer>
-      <!-- FOOTER
+  <!--FOOTER-->
+  <footer>
+  </footer>
+  <!-- FOOTER
 
-    <!- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- MY JAVASCRIPT -->
-    <script src="js/main3.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- MY JAVASCRIPT -->
+  <script src="js/main3.js"></script>
+  <script src="js/menu.js"></script>
 
 
 

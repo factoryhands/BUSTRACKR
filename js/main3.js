@@ -1,7 +1,7 @@
 jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
-    script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+    script.src = "http://maps.googleapis.com/maps/api/js?sensor=true&callback=initialize";
     document.body.appendChild(script);
 });
 
@@ -11,21 +11,22 @@ function initialize() {
     var mapOptions = {  
         streetViewControl: false,
         styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":
-            [{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":
-            [{"visibility":"on"},{"hue":"#1900ff"},{"color":"#262E2F"}]},{"featureType":"road","elementType":"geometry","stylers":
-            [{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":
-            [{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":
-            [{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#B1C3CE"}]}]
+                [{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":
+                [{"visibility":"on"},{"hue":"#1900ff"},{"color":"#262E2F"}]},{"featureType":"road","elementType":"geometry","stylers":
+                [{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":
+                [{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":
+                [{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#B1C3CE"}]}]
     };
                     
     // Display a map on the page
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     // map.setTilt(45);
         
     // Multiple Markers
     var markers = [
         ['New York, New York', 40.7484, 73.9857],
-        ['Tijuana, Mexico', 32.5250, 117.0333]
+        // ['Tijuana, Mexico', -32.5250, 117.0333],
+        // ['San Francisco, California', 37.7833, 122.4167]
     ];
                         
     // Info Window Content
@@ -66,7 +67,7 @@ function initialize() {
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(4);
+        this.setZoom(3);
         google.maps.event.removeListener(boundsListener);
     });
     
