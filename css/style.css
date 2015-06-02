@@ -89,17 +89,25 @@ html, body, #map-canvas {
 /* NAVBAR                
 /*******************************************/
 .navbar {
-    position: relative;
+    float: left;
+    width: 100%;
+    position: fixed;
     margin: 0;
     border: none;
-    height: 60px;
+    height: 10vh;
 }
 
 .nav-brand {
     position: absolute;
     left: 50%;
     margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
+
+}
+
+
+#btlogo{
+/*    height: 50px;
+    padding: 2%;*/
 }
 
 #nav a {
@@ -109,6 +117,7 @@ html, body, #map-canvas {
 
 .navbar-default {
     background-color: #262E2F;
+
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
@@ -137,7 +146,7 @@ html, body, #map-canvas {
 }
 
 #nav .nav-brand {
-   display:none;
+/*   display:none;*/
 }
 #nav.affix .nav-brand {
    display:inline-block;
@@ -154,19 +163,41 @@ html, body, #map-canvas {
 /******************************************
 /* TWITTER SIDEBAR              
 /*******************************************/
+
+.fa-chevron-left, .fa-chevron-right{
+    color:#262E2F;
+}
+
+
 .twitter-menu{
-    transition: all 1s ease-in-out;
-    padding: 2%;
     position: fixed;
     z-index: 2;
     height: 100vh;
     width: 30vw;
+    transition: all 1s ease-in-out;
+    padding: 2%;
     color: white;
     background-color: #262E2F;
     float: left;
     margin-left: 100vw;
     box-shadow: -10px 0px 4px rgba(0, 0, 0, 0.2);
 }
+
+.twitter-menu p{
+    padding-top: 15vh;
+}
+
 .twitter-menu-out{
     margin-left: 70vw;
 }
+
+.car_side{
+
+    position: relative;
+    top: 40%;
+    right: 100px;
+    z-index: 5;
+    float: left;
+    height: 0;
+    width: 0;}
+

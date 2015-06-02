@@ -61,6 +61,7 @@ function initialize() {
             }
         })(marker, i));
 
+
         // Automatically center the map fitting all markers on the screen
         map.fitBounds(bounds);
     }
@@ -76,7 +77,12 @@ function initialize() {
 function expandMenu(){
     console.log("yoo it worked");
     $(".twitter-menu").toggleClass("twitter-menu-out");
+    if ($(".twitter-menu").hasClass("twitter-menu-out")) {
+     $(".car_side").html("<i class='fa fa-chevron-right fa-5x'></i>")  
+    } else {
+ $(".car_side").html("<i class='fa fa-chevron-left fa-5x'></i>")  
+    };
 
 };
 
-$(".fa-bars").click(expandMenu);
+$(".car_side").click(expandMenu);
