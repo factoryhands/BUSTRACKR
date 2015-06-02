@@ -1,0 +1,12 @@
+.twitter-menu{
+	padding: 2%;
+	position: fixed;
+	z-index: 2;
+	height: 100vh;
+	width: 30vw;
+	color: white;
+	background-color: #262E2F;
+	float: left;
+	margin-left: 70vw;
+	box-shadow: -10px 0px 3px rgba(0, 0, 0, 0.3);
+}

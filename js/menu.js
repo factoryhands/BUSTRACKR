@@ -28,3 +28,13 @@ $(document).keyup(function(e) {
         }
     } 
 });
+
+
+function expandMenu(){
+    console.log("yoo it worked");
+    $(".twitter-menu").toggleClass("twitter-menu-out");
+
+};
+
+
+$(".glyphicon-menu-hamburger").click(expandMenu);

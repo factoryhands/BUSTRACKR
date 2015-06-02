@@ -72,3 +72,11 @@ function initialize() {
     });
     
 }
+
+function expandMenu(){
+    console.log("yoo it worked");
+    $(".twitter-menu").toggleClass("twitter-menu-out");
+
+};
+
+$(".fa-bars").click(expandMenu);
