@@ -189,6 +189,7 @@ html, body, #map-canvas {
 
 .twitter-menu-out{
     margin-left: 70vw;
+    overflow-y: scroll;
 }
 
 .car_side{
